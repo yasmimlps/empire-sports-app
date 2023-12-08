@@ -63,15 +63,14 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - assets/
-    - assets/fonts/
     - assets/icons/
     - assets/images/
 
   fonts:
     - family: Montserrat
       fonts:
-        - assets: assets/fonts/Montserrat-Bold.ttf
-        - assets: assets/fonts/Montserrat-Regular.ttf
+        - asset: assets/fonts/Montserrat/Montserrat-Bold.ttf
+        - asset: assets/fonts/Montserrat/Montserrat-Regular.ttf
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
