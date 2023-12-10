@@ -95,6 +95,8 @@ class CardTip extends StatelessWidget {
   Widget _buildButton(String image, String text) {
     return ButtonIcon(
       onPressed: () {},
+      colorBackground: Colors.white,
+      colorText: AppColors.black,
       image: image,
       text: text,
       heightIcon: 16,
