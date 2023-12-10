@@ -4,42 +4,59 @@ import 'package:empire_sports/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class Banners extends StatelessWidget {
-  const Banners({super.key});
+  const Banners({Key? key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(top: 20, bottom: 50),
+      margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
       child: CarouselSlider(
-          items: const [
-            CardBanner(
-              image: 'assets/images/image12.png',
-              title: 'Campeonatos populares',
-              color: AppColors.primaryColor,
-              subtitle: '',
-              flag: false,
-            ),
-            CardBanner(
-              image: 'assets/images/nba.png',
-              title: 'NBA',
-              color: AppColors.gray1,
-              subtitle: 'National Basketball Association',
-              flag: false,
-            ),
-            CardBanner(
-              image: 'assets/images/redbull.png',
-              title: 'League of its Own',
-              color: AppColors.brownCardColor,
-              subtitle: '',
-              flag: true,
-            ),
-          ],
-          options: CarouselOptions(
-            height: 180,
-            enlargeCenterPage: false,
-            enableInfiniteScroll: false,
-            viewportFraction: 0.7,
-          )),
+        items: _buildBannerCards(),
+        options: CarouselOptions(
+          height: 180,
+          enlargeCenterPage: false,
+          enableInfiniteScroll: false,
+          viewportFraction: 0.78,
+        ),
+      ),
+    );
+  }
+
+  List<Widget> _buildBannerCards() {
+    return [
+      _buildCard(
+        image: 'assets/images/image12.png',
+        title: 'Campeonatos populares',
+        color: AppColors.primaryColor,
+      ),
+      _buildCard(
+        image: 'assets/images/nba.png',
+        title: 'NBA',
+        color: AppColors.gray1,
+        subtitle: 'National Basketball Association',
+      ),
+      _buildCard(
+        image: 'assets/images/redbull.png',
+        title: 'League of its Own',
+        color: AppColors.brownCardColor,
+        flag: true,
+      ),
+    ];
+  }
+
+  Widget _buildCard({
+    required String image,
+    required String title,
+    required Color color,
+    String subtitle = '',
+    bool flag = false,
+  }) {
+    return CardBanner(
+      image: image,
+      title: title,
+      color: color,
+      subtitle: subtitle,
+      flag: flag,
     );
   }
 }

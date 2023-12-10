@@ -15,7 +15,7 @@ class CardMatch extends StatelessWidget {
   final String betsson;
   final int id;
 
-  CardMatch({
+  const CardMatch({
     Key? key,
     required this.isCurrentPageMatch,
     required this.image_1,
