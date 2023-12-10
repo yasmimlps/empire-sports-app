@@ -69,7 +69,7 @@ class CardBanner extends StatelessWidget {
       left: 30,
       child: SizedBox(
         height: 90,
-        width: flag ? 95 : 140,
+        width: flag ? 100 : 140,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
