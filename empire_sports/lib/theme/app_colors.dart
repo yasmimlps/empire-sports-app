@@ -5,6 +5,7 @@ class AppColors {
   static const brownCardColor = Color(0x33C4B239);
   static const gray1 = Color(0xFFC0C4C2);
   static const gray2 = Color(0xFFDEE0DF);
+  static const gray3 = Color(0xFF505854);
   static const red = Colors.red;
   static const black = Colors.black;
   static const blackOpacity = Color(0x1E000000);
