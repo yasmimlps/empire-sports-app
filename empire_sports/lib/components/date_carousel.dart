@@ -22,9 +22,10 @@ class DateCarousel extends StatelessWidget {
       itemCount: dates.length,
       options: CarouselOptions(
         height: 50,
-        viewportFraction: 0.2,
+        viewportFraction: 0.22,
         enableInfiniteScroll: false,
         reverse: false,
+        padEnds: false,
         scrollDirection: Axis.horizontal,
       ),
       itemBuilder: (context, index, realIndex) {
