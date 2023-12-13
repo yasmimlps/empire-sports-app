@@ -17,6 +17,7 @@ class Banners extends StatelessWidget {
           enlargeCenterPage: false,
           enableInfiniteScroll: false,
           viewportFraction: 0.78,
+          padEnds: false,
         ),
       ),
     );
